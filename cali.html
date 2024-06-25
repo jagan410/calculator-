@@ -1,0 +1,267 @@
+<html>
+<head>
+<style>
+#bb{
+background-color:#606060;
+}
+#hii{
+background-color:#606060;
+width:40%;
+height:70%;
+margin-left:330px;
+margin-right:50px;
+margin-top:100px;
+}
+.pi{
+height:30px;
+width:49%;
+margin-left:100px;
+border:2px solid orange;
+}
+#a{
+font-size:20px;
+height:10%;
+width:10%;
+margin-left:100px;
+border:2px solid orange;
+background-color:orange;
+}
+
+#b{
+font-size:20px;
+height:10%;
+width:10%;
+margin-left:10px;
+border:2px solid orange;
+background-color:orange;
+}
+#c{
+font-size:20px;
+height:10%;
+width:10%;
+margin-left:10px;
+border:2px solid orange;
+background-color:orange;
+}
+#d{
+font-size:20px;
+height:10%;
+width:10%;
+margin-left:10px;
+border:2px solid orange;
+background-color:orange;
+}
+#e{
+font-size:20px;
+margin-top:10px;
+margin-left:100px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+
+#f{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#g{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+
+#h{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#i{
+font-size:20px;
+margin-top:10px;
+margin-left:100px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#j{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#k{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#l{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#m{
+font-size:20px;
+margin-top:10px;
+margin-left:100px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#n{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#o{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#p{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#q{
+font-size:20px;
+margin-top:10px;
+margin-left:100px;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#r{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+border-radius:50%;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#s{
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+height:10%;
+width:10%;
+border:2px solid orange;
+background-color:orange;
+}
+#t{
+background-color:orange;
+font-size:20px;
+margin-top:10px;
+margin-left:10px;
+height:10%;
+width:10%;
+border:2px solid orange;
+}
+
+</style>
+</head>
+<body id="bb">
+<div id="hii">
+<h1 style="margin-left:155px";>calculator</h1>
+<input  placeholder="0" class="pi" id="inputbox" readonly></input><br></br>
+<button id="a">Ac</button>
+<button id="b">Del</button>
+<button id="c">%</button>
+<button id="d">/</button><br>
+<button id="e">7</button>
+<button id="f">8</button>
+<button id="g">9</button>
+<button id="h">*</button><br>
+<button id="i">4</button>
+<button id="j">5</button>
+<button id="k">6</button>
+<button id="l">-</button><br>
+<button id="m">1</button>
+<button id="n">2</button>
+<button id="o">3</button>
+<button id="p">+</button><br>
+<button id="q">00</button>
+<button id="r">0</button>
+<button id="s">.</button>
+<button id="t">=</button>
+</div>
+<script>
+let display=document.getElementById("inputbox");
+let buttons=document.querySelectorAll("button");
+let buttonsArray=Array.from(buttons);
+let string="";
+buttonsArray.forEach(function(btn){
+btn.addEventListener('click',function(event){
+if(event.target.innerHTML=='Del'){
+string=string.substring(0,string.length-1);
+display.value=string;
+}
+else if(event.target.innerHTML=='Ac'){
+string="";
+display.value=string;
+}
+else if(event.target.innerHTML=='='){
+string=eval(string);
+display.value=string;
+}
+else{
+string=string+event.target.innerHTML;
+display.value=string;
+}
+});
+});
+
+
+</script>
+</body>
+</html>
